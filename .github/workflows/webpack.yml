@@ -17,6 +17,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Generate index.wasm
+      run: |
+        # Command to generate index.wasm, update as needed
+        echo "Generated content" > src/index.wasm
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
